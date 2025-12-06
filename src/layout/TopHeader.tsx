@@ -1,5 +1,7 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
+import { COLORS } from "../theme/colors";
 
 const TopHeader: React.FC = () => {
   return (
@@ -16,32 +18,50 @@ const TopHeader: React.FC = () => {
     >
       <Toolbar
         sx={{
-          left: 35,
-          gap: 1.5,
           pr: 2,
+          pl: 2,
           minHeight: "40px !important",
           alignItems: "center",
+          justifyContent: "space-between",
         }}
       >
-        <Box
-          sx={{
-            backgroundColor: "#e0f2ff",
-            px: 1,
-            py: 0.3,
-            borderRadius: 1,
-            mr: 2,
-          }}
-        >
-          <Typography sx={{ fontWeight: "bold", color: "black" }}>
-            לוגו
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mr: -2 }}>
+          <Box
+            sx={{
+              backgroundColor: "#e0f2ff",
+              px: 1,
+              py: 0.3,
+              borderRadius: 1,
+              ml: 2,
+            }}
+          >
+            <Typography sx={{ fontWeight: "bold", color: "black" }}>
+              לוגו
+            </Typography>
+          </Box>
+
+          <Typography sx={{ color: COLORS.lightGrey, fontSize: "0.85rem" }}>
+            שם משתמש: פרופ' רוית גבע
+          </Typography>
+          <Typography sx={{ color: COLORS.lightGrey, fontSize: "0.85rem" }}>
+            תפקיד: רופא
           </Typography>
         </Box>
-        <Typography sx={{ color: "#757575", fontSize: "0.85rem" }}>
-          שם משתמש: פרופ' רוית גבע
-        </Typography>
-        <Typography sx={{ color: "#757575", fontSize: "0.85rem" }}>
-          תפקיד: רופא
-        </Typography>
+
+        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <Typography sx={{ color: COLORS.lightGrey, fontSize: "0.85rem" }}>
+            09.04.2025 | 14:00
+          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+            <Typography sx={{ color: COLORS.lightGrey, fontSize: "0.85rem" }}>
+              יציאה
+            </Typography>
+            <LoginOutlinedIcon
+              fontSize="small"
+              sx={{ color: COLORS.lightGrey }}
+            />
+          </Box>
+        </Box>
       </Toolbar>
     </AppBar>
   );

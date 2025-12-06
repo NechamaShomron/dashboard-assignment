@@ -11,7 +11,7 @@ const PageLayout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
       <Sidebar />
       <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
         <TopHeader />
-        <Box sx={{ p: 2, mt: "2%", mr: "3%" }}>{children}</Box>
+        <Box sx={{ p: 2, mt: "2%", mr: "3%", width: "100%" }}>{children}</Box>
       </Box>
     </Box>
   );

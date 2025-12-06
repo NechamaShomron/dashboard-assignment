@@ -1,13 +1,13 @@
 import { Box, Button } from "@mui/material";
-import { toolbarButtons } from "../lib/mockData";
-import type { ToolbarButton } from "../lib/types";
+import { summaryBar } from "../lib/mockData";
+import type { SummaryBarItem } from "../lib/types";
 
-const ToolbarFilter = () => (
+const SummaryBar = () => (
   <Box display="flex" gap={1}>
-    {toolbarButtons.map((btn: ToolbarButton) => {
+    {summaryBar.map((item: SummaryBarItem) => {
       return (
         <Button
-          key={btn.label}
+          key={item.label}
           variant="outlined"
           sx={{
             textTransform: "none",
@@ -24,14 +24,14 @@ const ToolbarFilter = () => (
             },
           }}
           startIcon={
-            <btn.icon color={btn.color} sx={{ color: btn.color, mr: -2 }} />
+            <item.icon color={item.color} sx={{ color: item.color, mr: -2 }} />
           }
         >
-          <span>{btn.label}</span>
+          <span>{item.label}</span>
         </Button>
       );
     })}
   </Box>
 );
 
-export default ToolbarFilter;
+export default SummaryBar;

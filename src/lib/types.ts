@@ -1,22 +1,14 @@
-export type ToolbarButtonColor =
-  | "primary"
-  | "secondary"
-  | "error"
-  | "warning"
-  | "info"
-  | "success";
-
-export interface ToolbarButton {
+export interface SummaryBarItem {
   label: string;
   icon: any;
   color: string;
 }
 
 export const RequestStatus = {
-  Accepted: "accepted",
-  Declined: "declined",
-  InProgress: "inprogress",
-  OnHold: "onhold",
+  Accepted: "אושרה",
+  Declined: "נדחתה",
+  InProgress: "בטיפול",
+  OnHold: "מושהה",
 } as const;
 
 export interface PatientRequest {
@@ -29,9 +21,11 @@ export interface PatientRequest {
   updatedInventory?: number;
   numOfTreatments?: number;
   drugApprovalExpirationDate: string;
+  hasMessages: boolean;
   doctorInCharge?: string;
   coordinatingNurse?: string;
   fundingFactor: string;
+  mail: boolean;
   updatesStatusDate: string;
   requestStatus: string;
 }
