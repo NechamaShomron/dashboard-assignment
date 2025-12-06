@@ -10,7 +10,7 @@ import { COLORS } from "../theme/colors";
 const RequestsPage: React.FC = () => {
   return (
     <div>
-      <Box sx={{ display: "flex", gap: 2 }}>
+      <Box sx={{ display: "flex", gap: 2, mb: 2 }}>
         <Button variant="contained" color="primary">
           פתיחת בקשה חדשה
         </Button>

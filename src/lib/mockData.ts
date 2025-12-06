@@ -49,7 +49,7 @@ export const mockPatientRequests: PatientRequest[] = [
   },
   {
     patientId: "318336985",
-    patientName: "ליאור יהודאי כהן",
+    patientName: "ליאור יהודאי",
     genericMedication: "ALDACTONE",
     openRequestDate: "11.5.25",
     catoDosage: "60mg",
@@ -82,7 +82,7 @@ export const mockPatientRequests: PatientRequest[] = [
 export const mockPatientRequestsNotifications: PatientRequest[] = [
   {
     patientId: "318336985",
-    patientName: "ליאור יהודאי כהן",
+    patientName: "ליאור יהודאי",
     genericMedication: "ALDACTONE",
     openRequestDate: "11.5.25",
     catoDosage: "60mg",
